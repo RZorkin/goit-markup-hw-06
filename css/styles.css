@@ -749,6 +749,7 @@ img {
 .plane {
 	position: absolute;
 	right: 28px;
+	fill: #ffffff;
 }
 
 /* PORTFOLIO */
@@ -955,7 +956,7 @@ img {
 }
 
 .modal-form-label {
-	position: relative;
+	/* position: relative; */
 	display: flex;
 	flex-direction: column;
 	font-family: "Roboto";
@@ -967,12 +968,16 @@ img {
 	color: #757575;
 }
 
-.modal-form-input {
+.modal-form-span {
+	position: relative;
+	margin-top: 4px;
 	margin-bottom: 10px;
+}
+
+.modal-form-input {
 	padding-top: 11px;
 	padding-bottom: 11px;
 	padding-left: 42px;
-	margin-top: 4px;
 	width: 100%;
 	height: 40px;
 	border: 1px solid rgba(33, 33, 33, 0.2);
@@ -988,13 +993,15 @@ img {
 
 .modal-form-icon {
 	position: absolute;
-	bottom: 21px;
 	left: 12px;
+	top: 50%;
+	transform: translateY(-50%);
+	fill: #212121;
 	transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-form-input:hover ~ .modal-form-icon,
-.modal-form-input:focus ~ .modal-form-icon {
+.modal-form-input:hover + .modal-form-icon,
+.modal-form-input:focus + .modal-form-icon {
 	fill: var(--hover-focus-logo-color);
 }
 
@@ -1062,7 +1069,7 @@ img {
 
 .modal-conditions-icon {
 	position: absolute;
-	fill: transparent;
+	fill: #ffffff;
 }
 
 .modal-conditions-link {
